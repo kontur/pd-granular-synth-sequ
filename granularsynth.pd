@@ -1,13 +1,13 @@
 #N canvas 174 179 1175 770 10;
 #N canvas 0 22 581 372 (subpatch) 0;
-#X array sample 44100 float 2;
-#X coords 0 1 44100 -1 200 140 2 0 0;
-#X restore 159 174 graph;
+#X array sample 1 float 2;
+#X coords 0 1 1 -1 200 140 2 0 0;
+#X restore 206 124 graph;
 #N canvas 0 23 450 278 (subpatch) 0;
-#X array grain 5624 float 2;
-#X coords 0 1 5624 -1 200 140 1 0 0;
-#X restore 364 174 graph;
-#X obj 103 174 tgl 30 0 empty empty LoopOn/Off 0 40 0 10 -4034 -1 -1
+#X array grain 1 float 2;
+#X coords 0 1 1 -1 200 140 1 0 0;
+#X restore 411 124 graph;
+#X obj 101 124 tgl 25 0 empty empty LoopOn/Off 0 35 0 10 -4034 -1 -1
 0 1;
 #X obj 285 432 r duration;
 #X floatatom 285 460 25 0 0 0 - - -;
@@ -19,11 +19,11 @@
 #N canvas 198 365 723 486 synthsliders 0;
 #X obj 73 260 *;
 #X obj 103 100 hsl 195 15 0 1 0 0 empty empty start 5 8 0 10 -228856
--1 -1 6100 0;
+-1 -1 0 0;
 #X obj 103 115 hsl 195 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 14000 0;
+-1 -1 19400 0;
 #X obj 308 100 hsl 195 15 -2 2 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 11200 0;
+-1 -1 14550 0;
 #X obj 88 231 r samplesize;
 #X floatatom 73 205 5 0 0 0 - - -;
 #X floatatom 83 285 10 0 0 0 - - -;
@@ -95,7 +95,7 @@
 #X connect 33 0 24 0;
 #X connect 34 0 31 0;
 #X coords 0 -1 1 1 405 30 1 100 100;
-#X restore 159 314 pd synthsliders;
+#X restore 206 275 pd synthsliders;
 #X floatatom 285 534 15 0 0 0 - - -;
 #X obj 285 506 r samples;
 #X obj 452 535 s readSamples;
@@ -157,7 +157,7 @@
 #X connect 19 0 18 1;
 #X connect 21 0 22 0;
 #X connect 22 0 23 0;
-#X restore 103 372 pd autoplay;
+#X restore 101 372 pd autoplay;
 #N canvas 766 354 718 545 grainresizing 0;
 #X obj 107 47 r startSample;
 #X obj 166 75 r endSample;
@@ -209,22 +209,21 @@
 #X connect 19 0 9 0;
 #X connect 19 0 3 0;
 #X restore 180 372 pd grainresizing;
-#X obj -59 165 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj -59 55 inlet;
-#X obj -14 55 r counter;
-#X obj 101 53 tgl 25 0 empty empty empty 17 7 0 10 -204786 -1 -1 0
+#X obj 11 135 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 11 25 inlet;
+#X obj 56 25 r counter;
+#X obj 11 53 spigot;
+#X obj 11 107 spigot;
+#X obj 11 81 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 206 51 toggleradio;
+#X obj 999 21 r counter_size;
+#X obj 206 19 r counter;
+#X obj 11 158 s play;
+#X obj 101 51 tgl 25 0 empty empty On/Off 0 35 0 10 -204786 -1 -1 0
 1;
-#X obj -59 83 spigot;
-#X obj -59 137 spigot;
-#X obj -59 111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X text 111 173 1 if for current counter the checkbox is checked \,
-else 0;
-#X obj 156 53 toggleradio;
-#X obj 949 23 r counter_size;
-#X obj 156 21 r counter;
-#X obj -59 188 s play;
+#X text 35 605;
 #X connect 2 0 22 0;
 #X connect 3 0 4 0;
 #X connect 5 0 6 0;
@@ -238,14 +237,14 @@ else 0;
 #X connect 17 0 13 0;
 #X connect 18 0 16 0;
 #X connect 19 0 20 0;
-#X connect 24 0 35 0;
-#X connect 25 0 28 0;
-#X connect 26 0 28 0;
-#X connect 27 0 28 1;
-#X connect 28 0 30 0;
-#X connect 29 0 24 0;
-#X connect 30 0 29 0;
-#X connect 32 0 29 1;
-#X connect 33 0 32 1;
-#X connect 34 0 32 0;
-#X coords 0 -1 1 1 860 300 2 100 50;
+#X connect 24 0 33 0;
+#X connect 25 0 27 0;
+#X connect 26 0 27 0;
+#X connect 27 0 29 0;
+#X connect 28 0 24 0;
+#X connect 29 0 28 0;
+#X connect 30 0 28 1;
+#X connect 31 0 30 1;
+#X connect 32 0 30 0;
+#X connect 34 0 27 1;
+#X coords 0 -1 1 1 930 300 2 100 50;
