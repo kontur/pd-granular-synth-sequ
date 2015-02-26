@@ -1,0 +1,182 @@
+#N canvas 150 377 1162 525 10;
+#X obj 785 372 t b f;
+#X floatatom 556 266 5 0 0 0 - - -;
+#X floatatom 617 296 5 0 0 0 - - -;
+#X obj 590 323 t b f;
+#X floatatom 670 211 5 0 0 0 - - -;
+#X obj 753 317 -;
+#X obj 707 269 t b f;
+#X floatatom 709 346 5 0 0 0 - - -;
+#X obj 63 110 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 32 247 list-idx;
+#X obj 18 108 t b f;
+#X obj 100 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 507 364 f \$0;
+#X obj 556 394 pack 0 0 0;
+#X obj 551 293 t b f;
+#X obj 745 427 pack 0 0 0;
+#X obj 745 346 t b f;
+#X obj 745 399 f \$0;
+#X obj 125 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 150 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 175 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 200 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 225 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 250 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 275 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 300 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 325 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 350 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 375 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 400 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 425 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 450 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 475 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 500 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 525 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 550 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 575 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 600 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 625 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 650 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 675 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 700 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 725 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 750 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 775 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 800 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 825 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 850 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 875 100 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 63 88 inlet;
+#X obj 100 192 pack f f f f f f f f f f f f f f f f f f f f f f f f
+f f f f f f f f;
+#X obj 32 275 outlet;
+#X text 101 9 @inlet float array(toggles) index;
+#X text 101 38 @outlet 0/1 based on checkbox toggle start for given
+index;
+#X text 513 8 thanks to Valtteri Wikström from SOPI research group
+\, Aalto Media Lab;
+#X obj 785 344 100;
+#X msg 555 436 \; \$1-coverCanvas vis_size \$2 \$3;
+#X msg 745 455 \; \$1-coverCanvas pos \$2 \$3;
+#X obj 450 100 cnv 25 450 25 empty \$0-coverCanvas empty 20 12 0 14
+-262144 -66577 0;
+#X obj 815 204 25;
+#X text 815 185 canvas square base size;
+#X obj 670 238 * \$1;
+#X obj 878 253 loadbang;
+#X text 101 24 @inlet int number of checkboxes on display;
+#X text 910 132 ^- white canvas element for hiding some checkboxes
+;
+#X obj 600 198 print;
+#X obj 688 165 inlet;
+#X obj 710 188 - 32;
+#X obj 730 212 abs;
+#X obj 774 270 901;
+#X connect 0 0 17 0;
+#X connect 0 1 15 2;
+#X connect 1 0 14 0;
+#X connect 2 0 3 0;
+#X connect 3 0 12 0;
+#X connect 3 1 13 2;
+#X connect 4 0 61 0;
+#X connect 5 0 7 0;
+#X connect 5 0 16 0;
+#X connect 6 0 5 0;
+#X connect 6 1 5 1;
+#X connect 8 0 50 0;
+#X connect 9 0 51 0;
+#X connect 10 0 50 0;
+#X connect 10 1 9 1;
+#X connect 11 0 50 0;
+#X connect 12 0 13 0;
+#X connect 13 0 56 0;
+#X connect 14 0 12 0;
+#X connect 14 1 13 1;
+#X connect 15 0 57 0;
+#X connect 16 0 17 0;
+#X connect 16 1 15 1;
+#X connect 17 0 15 0;
+#X connect 18 0 50 1;
+#X connect 19 0 50 2;
+#X connect 20 0 50 3;
+#X connect 21 0 50 4;
+#X connect 22 0 50 5;
+#X connect 23 0 50 6;
+#X connect 24 0 50 7;
+#X connect 25 0 50 8;
+#X connect 26 0 50 9;
+#X connect 27 0 50 10;
+#X connect 28 0 50 11;
+#X connect 29 0 50 12;
+#X connect 30 0 50 13;
+#X connect 31 0 50 14;
+#X connect 32 0 50 15;
+#X connect 33 0 50 16;
+#X connect 34 0 50 17;
+#X connect 35 0 50 18;
+#X connect 36 0 50 19;
+#X connect 37 0 50 20;
+#X connect 38 0 50 21;
+#X connect 39 0 50 22;
+#X connect 40 0 50 23;
+#X connect 41 0 50 24;
+#X connect 42 0 50 25;
+#X connect 43 0 50 26;
+#X connect 44 0 50 27;
+#X connect 45 0 50 28;
+#X connect 46 0 50 29;
+#X connect 47 0 50 30;
+#X connect 48 0 50 31;
+#X connect 49 0 8 0;
+#X connect 49 0 10 0;
+#X connect 50 0 9 0;
+#X connect 55 0 0 0;
+#X connect 59 0 61 1;
+#X connect 59 0 2 0;
+#X connect 59 0 1 0;
+#X connect 61 0 1 0;
+#X connect 61 0 6 0;
+#X connect 62 0 55 0;
+#X connect 62 0 59 0;
+#X connect 62 0 69 0;
+#X connect 66 0 65 0;
+#X connect 66 0 67 0;
+#X connect 67 0 68 0;
+#X connect 68 0 4 0;
+#X connect 69 0 5 0;
+#X coords 0 -1 1 1 800 25 1 100 100;
