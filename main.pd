@@ -1,7 +1,7 @@
-#N canvas 182 31 1178 780 10;
+#N canvas 222 34 1178 780 10;
 #N canvas 236 384 1132 510 counter 0;
 #X obj 206 100 hradio 25 1 0 8 counter counter_radio empty 0 -8 0 10
--262144 -1 -1 2;
+-262144 -1 -1 0;
 #X obj 206 44 metro;
 #X obj 100 100 tgl 25 0 empty empty empty 17 7 0 10 -4034 -1 -262144
 0 1;
