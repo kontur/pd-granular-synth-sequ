@@ -1,31 +1,33 @@
-#N canvas 240 79 1139 634 10;
+#N canvas 239 71 1139 634 10;
 #X obj 24 630 output~;
 #X obj 24 571 catch~ left;
 #X obj 82 599 catch~ right;
 #N canvas 236 384 1132 510 counter 0;
-#X obj 206 100 hradio 25 1 0 12 counter counter_radio empty 0 -8 0
-10 -262144 -1 -1 7;
+#X obj 206 100 hradio 25 1 0 8 counter counter_radio empty 0 -8 0 10
+-262144 -1 -1 3;
 #X obj 206 44 metro;
 #X obj 100 100 tgl 25 0 empty empty empty 17 7 0 10 -4034 -1 -1 1 1
 ;
 #X floatatom 136 105 5 1 32 0 - - -;
 #X obj 206 72 counter 0;
-#X obj 136 158 s counter_radio;
+#X obj 136 198 s counter_radio;
 #X obj 233 16 inlet;
 #X obj 136 44 loadbang;
 #X obj 136 72 8;
-#X msg 136 130 number \$1;
+#X msg 136 170 number \$1;
 #X obj 219 130 s counter_size;
+#X obj 257 44 - 1;
 #X connect 1 0 4 0;
 #X connect 2 0 1 0;
-#X connect 3 0 4 4;
-#X connect 3 0 9 0;
 #X connect 3 0 10 0;
+#X connect 3 0 11 0;
+#X connect 3 0 9 0;
 #X connect 4 0 0 0;
 #X connect 6 0 1 1;
 #X connect 7 0 8 0;
 #X connect 8 0 3 0;
 #X connect 9 0 5 0;
+#X connect 11 0 4 4;
 #X coords 0 -1 1 1 930 25 2 100 100;
 #X restore 55 52 pd counter;
 #X floatatom 41 13 15 0 0 0 - - -;
