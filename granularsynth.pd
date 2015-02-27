@@ -1,6 +1,6 @@
 #N canvas 388 187 1175 770 10;
 #X obj 101 124 tgl 25 0 empty empty LoopOn/Off 0 35 0 10 -203904 -1
--1 1 1;
+-1 0 1;
 #X obj 285 432 r duration;
 #X floatatom 285 460 25 0 0 0 - - -;
 #X obj 111 432 r startSample;
@@ -8,14 +8,14 @@
 #X floatatom 204 460 10 0 0 0 - - -;
 #X obj 204 432 r endSample;
 #X text 286 479 milliseconds;
-#N canvas 668 350 723 486 synthsliders 0;
+#N canvas 692 375 723 486 synthsliders 1;
 #X obj 73 260 *;
 #X obj 103 100 hsl 195 15 0 1 0 0 empty empty start 5 8 0 10 -261682
--260097 -260097 5800 0;
+-260097 -260097 0 0;
 #X obj 103 115 hsl 195 15 0 1 0 0 empty empty end 175 8 0 10 -261234
--258113 -258113 11000 0;
+-258113 -258113 19400 0;
 #X obj 308 100 hsl 195 15 -2 2 0 0 empty empty grain_speed 5 8 0 10
--191407 -1 -1 13600 0;
+-191407 -1 -1 14550 0;
 #X obj 88 231 r samplesize;
 #X floatatom 73 205 5 0 0 0 - - -;
 #X floatatom 83 285 10 0 0 0 - - -;
@@ -48,6 +48,9 @@
 #X obj 428 334 *;
 #X obj 519 287 abs;
 #X obj 428 362 abs;
+#X obj 585 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 585 119 r onSendToSample;
 #X connect 0 0 6 0;
 #X connect 0 0 19 0;
 #X connect 1 0 5 0;
@@ -86,6 +89,10 @@
 #X connect 32 0 34 0;
 #X connect 33 0 24 0;
 #X connect 34 0 31 0;
+#X connect 35 0 3 0;
+#X connect 35 0 1 0;
+#X connect 35 0 2 0;
+#X connect 36 0 35 0;
 #X coords 0 -1 1 1 405 30 1 100 100;
 #X restore 206 275 pd synthsliders;
 #X floatatom 285 534 15 0 0 0 - - -;
@@ -219,9 +226,9 @@
 0;
 #X obj 411 124 cnv 15 200 140 empty empty empty 20 12 0 14 -203904
 -66577 0;
-#X obj 264 124 cnv 1 1 140 empty sample_start_line empty 20 12 0 14
+#X obj 206 124 cnv 1 1 140 empty sample_start_line empty 20 12 0 14
 -260097 -66577 0;
-#X obj 317 124 cnv 1 1 140 empty sample_end_line empty 20 12 0 14 -258113
+#X obj 403 124 cnv 1 1 140 empty sample_end_line empty 20 12 0 14 -258113
 -66577 0;
 #X floatatom 486 508 15 0 0 0 - - -;
 #X obj 203 505 r samplesize;
@@ -332,12 +339,12 @@
 #X connect 46 0 45 0;
 #X restore 291 372 pd sliderlines;
 #N canvas 0 22 581 372 (subpatch) 0;
-#X array sample 211763 float 2;
-#X coords 0 1 211763 -1 200 140 2 0 0;
+#X array sample 22742 float 2;
+#X coords 0 1 22742 -1 200 140 2 0 0;
 #X restore 205 124 graph;
 #N canvas 0 23 450 278 (subpatch) 0;
-#X array grain 45643 float 2;
-#X coords 0 1 45643 -1 200 140 1 0 0;
+#X array grain 1 float 2;
+#X coords 0 1 1 -1 200 140 1 0 0;
 #X restore 411 124 graph;
 #X obj 101 171 bng 25 250 50 0 play empty playonce 0 35 0 10 -203904
 -1 -1;
