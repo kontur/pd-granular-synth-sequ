@@ -1,4 +1,4 @@
-#N canvas 93 260 730 760 10;
+#N canvas 200 342 1126 770 10;
 #X obj 101 124 tgl 25 0 empty empty LoopOn/Off 0 35 0 10 -203904 -1
 -1 0 1;
 #X obj 285 432 r duration;
@@ -175,7 +175,7 @@
 #X connect 31 0 27 0;
 #X connect 31 0 26 2;
 #X restore 101 372 pd autoplay;
-#N canvas 590 44 789 759 grainresizing 1;
+#N canvas 590 44 789 759 grainresizing 0;
 #X obj 223 162 r samples;
 #X obj 299 259 /;
 #X floatatom 307 189 15 0 0 0 - - -;
@@ -404,6 +404,14 @@ grain sample size \, from changing either: start \, end \, samplespeed
 #X text 712 276 ms;
 #X obj 101 217 bng 25 250 50 0 play empty playonce 0 35 0 10 -203904
 -1 -1;
+#X obj 622 124 bng 25 250 50 0 empty empty rec 0 30 0 10 -258113 -1
+-1;
+#X obj 849 487 soundfiler;
+#X obj 849 431 openpanel;
+#X floatatom 849 511 15 0 0 0 - - -;
+#X msg 849 459 read -resize \$1 sample;
+#X obj 658 124 bng 25 250 50 0 empty empty open 0 30 0 10 -4034 -99865
+-99865;
 #X connect 0 0 20 0;
 #X connect 1 0 2 0;
 #X connect 3 0 4 0;
@@ -431,4 +439,8 @@ grain sample size \, from changing either: start \, end \, samplespeed
 #X connect 38 0 39 0;
 #X connect 45 0 44 0;
 #X connect 46 0 45 0;
+#X connect 50 0 52 0;
+#X connect 51 0 53 0;
+#X connect 53 0 50 0;
+#X connect 54 0 51 0;
 #X coords 0 -1 1 1 930 300 2 100 50;
