@@ -1,6 +1,6 @@
-#N canvas 123 187 1175 770 10;
-#X obj 101 124 tgl 25 0 empty empty LoopOn/Off 0 35 0 10 -4034 -1 -1
-0 1;
+#N canvas 388 187 1175 770 10;
+#X obj 101 124 tgl 25 0 empty empty LoopOn/Off 0 35 0 10 -203904 -1
+-1 1 1;
 #X obj 285 432 r duration;
 #X floatatom 285 460 25 0 0 0 - - -;
 #X obj 111 432 r startSample;
@@ -11,11 +11,11 @@
 #N canvas 668 350 723 486 synthsliders 0;
 #X obj 73 260 *;
 #X obj 103 100 hsl 195 15 0 1 0 0 empty empty start 5 8 0 10 -261682
--260097 -260097 4700 0;
+-260097 -260097 5800 0;
 #X obj 103 115 hsl 195 15 0 1 0 0 empty empty end 175 8 0 10 -261234
--258113 -258113 3100 0;
+-258113 -258113 11000 0;
 #X obj 308 100 hsl 195 15 -2 2 0 0 empty empty grain_speed 5 8 0 10
--191407 -1 -1 16000 0;
+-191407 -1 -1 13600 0;
 #X obj 88 231 r samplesize;
 #X floatatom 73 205 5 0 0 0 - - -;
 #X floatatom 83 285 10 0 0 0 - - -;
@@ -213,15 +213,15 @@
 #X obj 999 21 r counter_size;
 #X obj 206 19 r counter;
 #X obj 11 158 s play;
-#X obj 101 51 tgl 25 0 empty empty On/Off 0 35 0 10 -204786 -1 -1 0
-1;
+#X obj 101 51 tgl 25 0 empty empty tracker 0 35 0 10 -204786 -1 -1
+0 1;
 #X obj 205 124 cnv 1 200 140 empty empty empty 20 12 0 14 -204800 -66577
 0;
 #X obj 411 124 cnv 15 200 140 empty empty empty 20 12 0 14 -203904
 -66577 0;
-#X obj 253 124 cnv 1 1 140 empty sample_start_line empty 20 12 0 14
+#X obj 264 124 cnv 1 1 140 empty sample_start_line empty 20 12 0 14
 -260097 -66577 0;
-#X obj 237 124 cnv 1 1 140 empty sample_end_line empty 20 12 0 14 -258113
+#X obj 317 124 cnv 1 1 140 empty sample_end_line empty 20 12 0 14 -258113
 -66577 0;
 #X floatatom 486 508 15 0 0 0 - - -;
 #X obj 203 505 r samplesize;
@@ -336,9 +336,15 @@
 #X coords 0 1 211763 -1 200 140 2 0 0;
 #X restore 205 124 graph;
 #N canvas 0 23 450 278 (subpatch) 0;
-#X array grain 22686 float 2;
-#X coords 0 1 22686 -1 200 140 1 0 0;
+#X array grain 45643 float 2;
+#X coords 0 1 45643 -1 200 140 1 0 0;
 #X restore 411 124 graph;
+#X obj 101 171 bng 25 250 50 0 play empty playonce 0 35 0 10 -203904
+-1 -1;
+#X floatatom 616 275 15 0 0 0 - - -;
+#X obj 634 387 int;
+#X obj 634 366 r duration;
+#X text 712 276 ms;
 #X connect 0 0 20 0;
 #X connect 1 0 2 0;
 #X connect 3 0 4 0;
@@ -364,4 +370,6 @@
 #X connect 30 0 28 0;
 #X connect 32 0 25 1;
 #X connect 38 0 39 0;
+#X connect 45 0 44 0;
+#X connect 46 0 45 0;
 #X coords 0 -1 1 1 930 300 2 100 50;
