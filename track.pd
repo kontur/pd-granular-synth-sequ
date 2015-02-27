@@ -3,7 +3,7 @@
 #X obj 159 591 throw~ right;
 #X obj 67 499 vline~;
 #X obj 637 309 adc~;
-#X obj 617 101 bng 25 250 50 0 empty empty rec 0 30 0 10 -258113 -1
+#X obj 617 139 bng 25 250 50 0 empty empty rec 0 30 0 10 -258113 -1
 -1;
 #X msg 636 211 normalize;
 #X obj 67 331 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -11,14 +11,14 @@
 #X obj 637 337 tabwrite~ \$0-channel;
 #X obj 636 239 s \$0-channel;
 #X obj 67 530 tabread4~ \$0-channel;
-#X obj 709 101 bng 25 250 50 0 empty empty norm 0 30 0 10 -228856 -1
+#X obj 709 139 bng 25 250 50 0 empty empty norm 0 30 0 10 -228856 -1
 -1;
 #X obj 67 221 inlet;
 #X obj 112 221 r counter;
-#X obj 100 174 tgl 25 0 empty empty ChannelOn/Off 0 -7 0 10 -204786
+#X obj 100 101 tgl 25 0 empty empty ChannelOn/Off 0 35 0 10 -204786
 -1 -1 0 1;
 #X obj 67 249 spigot;
-#X obj 801 101 bng 25 250 50 0 empty empty syt> 0 30 0 10 -204800 -1
+#X obj 801 139 bng 25 250 50 0 empty empty syt> 0 30 0 10 -204800 -1
 -1;
 #X obj 829 509 until;
 #X obj 829 537 f;
@@ -30,7 +30,7 @@
 #X msg 690 468 resize \$1;
 #X obj 690 496 s sample;
 #X obj 753 496 s grain;
-#X obj 837 101 bng 25 250 50 0 empty empty syt< 0 30 0 10 -203904 -1
+#X obj 837 139 bng 25 250 50 0 empty empty syt< 0 30 0 10 -203904 -1
 -1;
 #X obj 1069 458 tabread grain;
 #X obj 1059 526 tabwrite \$0-channel;
@@ -96,7 +96,7 @@
 -1;
 #X text 110 294 1 if for current counter the checkbox is checked \,
 else 0;
-#X obj 206 174 toggleradio;
+#X obj 206 101 toggleradio;
 #X obj 999 72 r counter_size;
 #X obj 803 368 t b f;
 #X obj 206 44 r counter;
@@ -107,13 +107,13 @@ else 0;
 #X obj 360 450 pack f f;
 #X msg 360 478 1 \$2 \, 0 \$2 \$1;
 #X obj 340 347 loadbang;
-#X obj 745 101 bng 25 250 50 0 empty empty clear 0 30 0 10 -99865 -258113
+#X obj 745 139 bng 25 250 50 0 empty empty clear 0 30 0 10 -99865 -258113
 -1;
 #X msg 764 211 const 0;
 #X obj 764 239 s \$0-channel;
 #X obj 483 465 soundfiler;
 #X obj 483 363 openpanel;
-#X obj 653 101 bng 25 250 50 0 empty empty open 0 30 0 10 -4034 -99865
+#X obj 653 139 bng 25 250 50 0 empty empty open 0 30 0 10 -4034 -99865
 -99865;
 #X floatatom 483 489 15 0 0 0 - - -;
 #X obj 528 335 f;
@@ -131,12 +131,14 @@ else 0;
 #X obj 1247 518 + 1;
 #X obj 337 373 10;
 #X obj 252 448 / 10;
-#X obj 206 101 cnv 15 400 60 empty empty empty 20 12 0 14 -233017 -66577
+#X obj 206 139 cnv 15 400 60 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #N canvas 642 386 830 476 (subpatch) 0;
-#X array \$0-channel 1 float 2;
-#X coords 0 1 1 -1 400 60 1 0 0;
-#X restore 206 101 graph;
+#X array \$0-channel 44100 float 2;
+#X coords 0 1 44100 -1 400 60 1 0 0;
+#X restore 206 139 graph;
+#X obj 101 155 bng 25 250 50 0 empty empty playonce 0 35 0 10 -228856
+-262144 -1;
 #X connect 2 0 9 0;
 #X connect 3 0 7 0;
 #X connect 3 1 7 0;
@@ -237,4 +239,5 @@ else 0;
 #X connect 89 0 88 1;
 #X connect 90 0 67 0;
 #X connect 91 0 67 0;
+#X connect 94 0 6 0;
 #X coords 0 -1 1 1 930 100 2 100 100;
