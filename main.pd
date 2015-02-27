@@ -29,7 +29,7 @@
 #X connect 12 0 1 1;
 #X coords 0 -1 1 1 930 25 2 100 100;
 #X restore 21 71 pd counter;
-#X obj 28 600 granularsynth;
+#X obj 21 600 granularsynth;
 #N canvas 481 138 923 715 volume 0;
 #X obj 100 100 output~;
 #X obj 100 41 catch~ left;
