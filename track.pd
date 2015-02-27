@@ -1,4 +1,4 @@
-#N canvas 216 78 1375 714 10;
+#N canvas 34 88 1375 714 10;
 #X obj 67 609 throw~ left;
 #X obj 159 609 throw~ right;
 #X obj 67 499 vline~;
@@ -133,8 +133,8 @@ else 0;
 #X obj 206 139 cnv 15 400 60 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #N canvas 642 386 830 476 (subpatch) 0;
-#X array \$0-channel 39966 float 2;
-#X coords 0 1 39966 -1 400 60 1 0 0;
+#X array \$0-channel 3810 float 2;
+#X coords 0 1 3810 -1 400 60 1 0 0;
 #X restore 206 139 graph;
 #X obj 101 155 bng 25 250 50 0 empty empty playonce 0 35 0 10 -228856
 -262144 -1;
